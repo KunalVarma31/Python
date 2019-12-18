@@ -1,0 +1,313 @@
+//program to find max int value
+#include <stdio.h>
+#include<limits.h>
+int
+main ()
+{
+  int a;
+  a = INT_MAX;
+  printf ("%d", a);
+}
+output=
+*****************************************************
+//program to find min int value
+#include <stdio.h>
+#include<limits.h>
+int
+main ()
+{
+  int a;
+  a = INT_MIN;
+  printf ("%d", a);
+}
+output=
+*****************************************************
+//program to print ASCII values
+#include <stdio.h>
+void main()
+{
+    int i;
+    for(i=65;i<=90;i++)
+    printf("%c",i);
+}
+output=
+*****************************************************
+//program to check %o
+#include <stdio.h>
+int main()
+{
+    int i=20;
+    printf("%o",i);
+}
+output=
+*****************************************************
+//program to check %x
+#include <stdio.h>
+int main()
+{
+    int i=20;
+    printf("%x",i);
+}
+output=
+*****************************************************
+//program for 0x...compiler considers it as hexadecimal
+#include <stdio.h>
+int main()
+{
+    int i=0x35;
+    printf("%d",i);
+}
+output=53
+*****************************************************
+//program for arithmetic operators
+#include <stdio.h>
+int main()
+{
+    printf("%d",'b'+'a');
+}
+output=193
+*****************************************************
+//program for fmod
+#include <stdio.h>
+int main()
+{
+    float a;
+    a=fmod(20.5+3.2);
+    printf("%f",a);
+}
+output=1.600000
+*****************************************************
+//program for pre inc
+#include <stdio.h>
+int main()
+{
+    int b,a=5;
+    b=++a;
+    printf("%d\t%d",a,b);
+}
+output=6 6
+*****************************************************
+//program for post inc
+#include <stdio.h>
+int main()
+{
+    int b,a=5;
+    printf("%d",a++);
+    printf("%d",a);
+}
+output=5 6
+*****************************************************
+//program for hello 6
+int main()
+{
+    int c;
+    c=printf("hello\n");
+    printf("\n%d",c);
+
+}
+output=hello
+       6
+*****************************************************
+//program to read inputs
+int main()
+{
+    int c;
+    c=printf("hello\n");
+    printf("\n%d",c);
+
+}
+output= 12
+        12
+        2
+*****************************************************
+//program for && 
+#include <stdio.h>
+int main()
+{
+    int a=5,b=0,c;
+    c=b&&++a;
+    printf("%d",a);
+}
+output=5
+*****************************************************
+//logical OR
+#include <stdio.h>
+int main()
+{
+    int a=5,b=0,c;
+    c=b||++a;
+    printf("%d",a);
+}
+output=6
+*****************************************************
+//and and or....and has higher precedence
+#include <stdio.h>
+int main()
+{
+    int a=5,b=6,c,d=0;
+    c=b||a&&d;
+    printf("%d",c);
+}
+output=1
+*****************************************************
+//bitwise ex-or
+#include <stdio.h>
+int main()
+{
+    int a=5,b=6,c;
+    c=a^b;
+    printf("%d",c);
+}
+output=3
+*****************************************************
+//right shift
+#include <stdio.h>
+int main()
+{
+    int a=5,b=6,c;
+    c=a>>1;
+    printf("%d",c);
+}
+output=2
+*****************************************************
+//left shift
+#include <stdio.h>
+int main()
+{
+    int a=5,b=6,c;
+    c=a<<1;
+    printf("%d",c);
+}
+output=10
+*****************************************************
+//negation
+#include <stdio.h>
+int main()
+{
+    int a=5,c;
+    c=~5;
+    printf("%d",c);
+}
+output=-6
+*****************************************************
+//relational operators '='
+#include <stdio.h>
+int main()
+{
+    int a=5,b=6;
+    if(a=b)
+    printf("yes");
+    else
+    printf("no");
+    printf("%d",a);
+}
+output=yes6
+*****************************************************
+//if 0
+#include <stdio.h>
+int main()
+{
+    int a=5,b=6;
+    if(0)
+    printf("yes");
+    else
+    printf("no");
+    printf("%d",a);
+}
+output=no5
+*****************************************************
+//assignment operators
+#include <stdio.h>
+int main()
+{
+    int a=5;
+    a*=6;
+    printf("%d",a);
+}
+output=30
+*****************************************************
+//size of
+#include <stdio.h>
+int main()
+{
+    long double a;
+    printf("%d",(sizeof(a)));
+}
+output=16
+*****************************************************
+//sizeof a++
+#include <stdio.h>
+int main()
+{
+    int a=5,b;
+    b=sizeof(a++);
+    printf("%d%d",a,b);
+    
+}
+output=5 4
+*****************************************************
+//sizeof ++a
+#include <stdio.h>
+int main()
+{
+    int a=5,b;
+    b=sizeof(++a);
+    printf("%d%d",a,b);
+    
+}
+output=5 4
+*****************************************************
+//trenary operator
+#include <stdio.h>
+int main()
+{
+    int a=6,b=5,c;
+    c=a<b?a:b;
+    printf("%d",c);
+}
+output=5
+*****************************************************
+//trenary2
+#include <stdio.h>
+int main()
+{
+    int a=6,b=5,c;
+    c=a?0:1;
+    printf("%d",c);
+}
+output=0
+*****************************************************
+//
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
+
+*****************************************************
