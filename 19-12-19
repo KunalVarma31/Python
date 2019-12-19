@@ -1,0 +1,307 @@
+//program for operator precedence
+#include <stdio.h>
+int main()
+{
+    int c;
+    c=20/200*200;
+    printf("%d",c);
+}
+output=0
+**************************************************
+//to obtain 20 as o/p
+#include <stdio.h>
+int main()
+{
+    int c;
+    c=(float)20/200*200;
+    printf("%d",c);
+}
+output=20
+**************************************************
+//prime no. without loops(8-100)
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    if(n%2!=0&&n%3!=0&&n%5!=0&&n%7!=0)
+        printf("Its a prime number");
+    else
+        printf("Its a non-prime number");
+}
+output=31
+its a prime no.
+**************************************************
+//arith ops using switch
+#include <stdio.h>
+int main()
+{
+    int a,b,op;
+    scanf("%d%d",&a,&b);
+    scanf("%d",&op);
+    switch(op)
+    {
+        case 1:printf("%d",a+b);break;
+        case 2:printf("%d",a-b);break;
+        case 3:printf("%d",a*b);break;
+        case 4:printf("%d",a/b);break;
+        case 5:printf("%d",a%b);break;
+        default:printf("Invalid Input");break;
+    }
+}
+output=5
+7
+1
+12
+**************************************************
+//arith ops using chars
+#include <stdio.h>
+int main()
+{
+    int a,b;
+    char op;
+    scanf("%d%d",&a,&b);
+    scanf(" %c",&op);
+    switch(op)
+    {
+        case '+':printf("%d",a+b);break;
+        case '-':printf("%d",a-b);break;
+        case '*':printf("%d",a*b);break;
+        case '/':printf("%d",a/b);break;
+        case '%':printf("%d",a%b);break;
+        default:printf("Invalid Input");break;
+    }
+}
+output=5
+7
++
+12
+**************************************************
+//reverse of digits
+#include <stdio.h>
+int main()
+{
+    int n,r;
+    scanf("%d",&n);
+    while(n!=0)
+    {
+        r=n%10;
+        printf("%5d",r);
+        n=n/10;
+    }
+}
+output=148
+     8     4     1
+**************************************************
+//sum of digits
+#include <stdio.h>
+int main()
+{
+    int n,r,s=0;
+    scanf("%d",&n);
+    while(n!=0)
+    {
+        r=n%10;
+        s=s+r;
+        n=n/10;
+    }
+    printf("\n%d",s);
+}
+output=148
+13
+**************************************************
+//count and sum of digits
+#include <stdio.h>
+int main()
+{
+    int n,r,c=0,s=0;
+    scanf("%d",&n);
+    while(n!=0)
+    {
+        c++;
+        r=n%10;
+        s=s+r;
+        n=n/10;
+    }
+    printf("%d\t%d",s,c);
+}
+output=148
+13     3
+**************************************************
+//palindrome
+#include <stdio.h>
+int main()
+{
+    int n,r,s=0,t;
+    scanf("%d",&n);
+    t=n;
+    while(t!=0)
+    {
+        r=t%10;
+        s=s*10+r;
+        t=t/10;
+    }
+    if(s==n)
+    printf("its a palindrome");
+    else
+    printf("its not a palindrome");
+}
+output=1331
+its a palindrome
+**************************************************
+//armstrong number
+#include <stdio.h>
+int main()
+{
+    int n,r,s=0,t;
+    scanf("%d",&n);
+    t=n;
+    while(t!=0)
+    {
+        r=t%10;
+        s=s+r*r*r;
+        t=t/10;
+    }
+    if(s==n)
+    printf("its an armstrong number");
+    else
+    printf("its not an armstrong number");
+}
+output=153
+its an armstrong number
+**************************************************
+//armstrong using 'pow'
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    int n,r,s=0,t,c;
+    scanf("%d",&n);
+    t=n;
+    while(t!=0)
+    {
+        c++;
+        t=t/10;
+    }
+    t=n;
+    while(t!=0)
+    {
+        r=t%10;
+        s=s+pow(r,c);
+        t=t/10;
+    }
+    if(s==n)
+    printf("its an armstrong number");
+    else
+    printf("its not an armstrong number");
+}
+output=153
+its an armstrong number
+**************************************************
+//range of armstrong
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    int n,r,s,t,c,range;
+    scanf("%d",&range);
+    for(n=1;n<=range;n++)
+    {
+        t=n;
+        c=0;
+        s=0;
+        while(t!=0)
+        {
+            c++;
+            t=t/10;
+        }
+            t=n;
+        while(t!=0)
+        {
+            r=t%10;
+            s=s+ceil(pow(r,c));
+            t=t/10;
+        }
+        if(s==n)
+            printf("\t%d",n);
+    }
+}
+output=10000
+ 1 2 3 4 5 6 7 8 9 153 370 371 407 1634 8208 9474
+**************************************************
+//palindrome range
+#include <stdio.h>
+int main()
+{
+    int n,r,s,t,range;
+    scanf("%d",&range);
+    for(n=0;n<=range;n++)
+    {
+        t=n;
+        s=0;
+        while(t!=0)
+        {
+            r=t%10;
+            s=s*10+r;
+            t=t/10;
+        }
+        if(s==n)
+        printf("\t%d",n);
+    }
+}
+output=1000
+	0	1	2	3	4	5	6	7	8	9	11	22	33	44	55	66	77	88	99	101	111	121	131	141	151	161	171	181	191	202	212	222	232	242	252	262	272	282	292	303	313	323	333	343	353	363	373	383	393	404	414	424	434	444	454	464	474	484	494	505	515	525	535	545	555	565	575	585	595	606	616	626	636	646	656	666	676	686	696	707	717	727	737	747	757	767	777	787	797	808	818	828	838	848	858	868	878	888	898	909	919	929	939	949	959	969	979	989	999
+**************************************************
+//n no. of palindromes
+#include <stdio.h>
+int main()
+{
+    int n,r,s,t,k,c;
+    scanf("%d",&k);
+    for(n=0;c<k;n++)
+    {
+        t=n;
+        s=0;
+        while(t!=0)
+        {
+            r=t%10;
+            s=s*10+r;
+            t=t/10;
+        }
+        if(s==n)
+        {
+            c++;
+            printf("\t%d=%d",c,n);
+        }
+            
+    }
+}
+output=15
+1=0 2=1 3=2 4=3 5=4 6=5 7=6 8=7 9=8 10=9 11=11 12=22 13=33 14=44 15=55
+**************************************************
+//nth palindrome
+#include <stdio.h>
+int main()
+{
+    int n,r,s,t,k,c=0;
+    scanf("%d",&k);
+    for(n=0;c<k;n++)
+    {
+        t=n;
+        s=0;
+        while(t!=0)
+        {
+            r=t%10;
+            s=s*10+r;
+            t=t/10;
+        }
+        if(s==n)
+        c++;
+            
+    }
+    printf("%d=%d",c,n-1);
+}
+output=18
+18=88
+**************************************************
+//
