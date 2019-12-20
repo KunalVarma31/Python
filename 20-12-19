@@ -1,0 +1,333 @@
+//prime or not
+#include <stdio.h>
+int main()
+{
+    int n,i,c=0;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        if(n%i==0)
+        c++;
+        
+    }
+    if(c==2)
+    printf("Prime Number");
+    else
+    printf("Not a Prime Number");
+}
+output=43
+prime number
+*************************************************
+//prime or not using c==0
+#include <stdio.h>
+int main()
+{
+    int n,i,c=0;
+    scanf("%d",&n);
+    for(i=2;i<=n/2;i++)
+    {
+        if(n%i==0)
+        c++;
+        
+    }
+    if(c==0)
+    printf("Prime Number");
+    else
+    printf("Not a Prime Number");
+}
+output=43
+prime number
+*************************************************
+//prime no. range
+#include <stdio.h>
+int main()
+{
+    int n,i,c,range;
+    scanf("%d",&range);
+    for(n=2;n<=range;n++)
+    {
+        c=0;
+        for(i=2;i<=n/2;i++)
+        {
+            if(n%i==0)
+            c++;
+        
+        }
+        if(c==0)
+        printf("%3d",n);
+    }
+}
+output=50
+2  3  5  7 11 13 17 19 23 29 31 37 41 43 47
+*************************************************
+//range of prime no. and their sum starting from 501
+#include <stdio.h>
+int main()
+{
+    int n,i,c,range,s=0;
+    scanf("%d",&range);
+    for(n=501;n<=range;n++)
+    {
+        c=0;
+        for(i=2;i<=n/2;i++)
+        {
+            if(n%i==0)
+            c++;
+        
+        }
+        if(c==0)
+        {
+            s=s+n;
+            printf("%5d",n);
+        }
+    }
+    printf("\n\n%d",s);
+}
+output=1000
+503  509  521  523  541  547  557  563  569  571  577  587  593  599  601  607  613  617  619  631  641  643  647  653  659  661  673 
+677  683  691  701  709  719  727  733  739  743  751  757  761  769  773  787  797  809  811  821  823  827  829  839  853  857  859  
+863  877  881  883  887  907  911  919  929  937  941  947  953  967  971  977  983  991  997                                           
+                                                                                                                                        
+54591
+*************************************************
+//nth prime number
+#include <stdio.h>
+int main()
+{
+    int n,i,c,count=0,k;
+    scanf("%d",&k);
+    for(n=2;count<k;n++)
+    {
+        c=0;
+        for(i=2;i<=n/2;i++)
+        {
+            if(n%i==0)
+            c++;
+        
+        }
+        if(c==0)
+        {
+            count++;
+        }
+    }
+    printf("%d=%d\t",count,n-1);
+}
+output=15
+15=47
+*************************************************
+//fibanocci series
+#include <stdio.h>
+int main()
+{
+    int n,f1=0,f2=1,f3,i;
+    scanf("%d",&n);
+    if(n==1)
+    printf("%d",f1);
+    else
+    printf("%d %d",f1,f2);
+    for(i=3;i<=n;i++)
+    {
+        f3=f1+f2;
+        printf("%3d",f3);
+        f1=f2;
+        f2=f3;
+    }
+}
+output=7
+0 1 1 2 3 5 8
+*************************************************
+//nth fibanocci with count 
+#include <stdio.h>
+int main()
+{
+    int n,f1=0,f2=1,f3,i,c;
+    scanf("%d",&n);
+    if(n==1)
+    printf("%d",f1);
+    else
+    {
+        for(i=3;i<=n;i++)
+        {
+            f3=f1+f2;
+            f1=f2;
+            f2=f3;
+        }
+        c=printf("%d",f2);
+    }
+    printf("\n%d",c);
+}
+output=25
+46368
+5
+*************************************************
+/*print pattern                                                                                                                           1
+1
+
+2*2                                                                                                                                                                      
+3*3*3                                                                                                                                                                    
+4*4*4*4                                                                                                                                                                  
+5*5*5*5*5                                                                                                                                                                
+4*4*4*4                                                                                                                                                                  
+3*3*3                                                                                                                                                                    
+2*2                                                                                                                                                                      
+1*/
+#include <stdio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%d",i);
+            if(j<i)
+                printf("*");
+        }
+        printf("\n");
+    }
+    for(i=4;i>=1;i--)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%d",i);
+            if(j<i)
+                printf("*");
+        }
+        printf("\n");
+    }
+}
+output=
+1
+
+2*2                                                                                                                                                                 
+3*3*3                                                                                                                                                                    
+4*4*4*4                                                                                                                                                                  
+5*5*5*5*5                                                                                                                                                                
+4*4*4*4                                                                                                                                                                  
+3*3*3                                                                                                                                                                    
+2*2                                                                                                                                                                      
+1
+*************************************************
+/*print pattern
+     1                                                                                                                                                                   
+    2 2                                                                                                                                                                  
+   3 3 3                                                                                                                                                                 
+  4 4 4 4                                                                                                                                                                
+ 5 5 5 5 5                                                                                                                                                               
+  4 4 4 4                                                                                                                                                                
+   3 3 3                                                                                                                                                                 
+    2 2                                                                                                                                                                  
+     1*/
+     
+#include <stdio.h>
+int main()
+{
+    int i,j,k;
+    for(i=1;i<=5;i++)
+    {
+        for(k=5;k>=i;k--)
+        {
+            printf(" ");
+        }
+        for(j=1;j<=i;j++)
+        {
+            printf("%d ",i);
+        }
+        printf("\n");
+    }
+    for(i=4;i>=1;i--)
+    {
+        for(k=i;k<=5;k++)
+        {
+            printf(" ");
+        }
+        for(j=1;j<=i;j++)
+        {
+            printf("%d ",i);
+        }
+        printf("\n");
+    }
+}
+output=
+     1                                                                                                                                                                   
+    2 2                                                                                                                                                                  
+   3 3 3                                                                                                                                                                 
+  4 4 4 4                                                                                                                                                                
+ 5 5 5 5 5                                                                                                                                                               
+  4 4 4 4                                                                                                                                                                
+   3 3 3                                                                                                                                                                 
+    2 2                                                                                                                                                                  
+     1
+*************************************************
+//pattern as before with right triangle
+#include <stdio.h>
+int main()
+{
+    int i,j,k;
+    for(i=1;i<=5;i++)
+    {
+        for(k=5;k>=i;k--)
+        {
+            printf(" ");
+        }
+        for(j=1;j<=i;j++)
+        {
+            printf("%d",j);
+        }
+        for(j=i-1;j>=1;j--)
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+    for(i=4;i>=1;i--)
+    {
+        for(k=i;k<=5;k++)
+        {
+            printf(" ");
+        }
+        for(j=1;j<=i;j++)
+        {
+            printf("%d",j);
+        }
+        for(j=i-1;j>=1;j--)
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+}
+output=
+     1                                                                                                                                                                   
+    121                                                                                                                                                                  
+   12321                                                                                                                                                                 
+  1234321                                                                                                                                                                
+ 123454321                                                                                                                                                               
+  1234321                                                                                                                                                                
+   12321                                                                                                                                                                 
+    121                                                                                                                                                                  
+     1
+*************************************************
+//pattern
+#include <stdio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            if(i==1||i==5||j==1||j==5)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+output=
+*****                                                                                                                                                                 
+*   *                                                                                                                                                                 
+*   *                                                                                                                                                                 
+*   *                                                                                                                                                                 
+***** 
